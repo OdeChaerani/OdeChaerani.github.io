@@ -1,27 +1,32 @@
+<!--
+Nama : Wa Ode Zachra Chaerani
+NPM  : 140810230062
+Kelas: B
+-->
 <!DOCTYPE html>
 <html>
     <head>
         <style>
             body {
                 font-family: Arial, sans-serif;
-                background-color: #f4f4f9;
+                background-color: #F2F0EA;
                 margin: 0;
                 padding: 0;
             }
 
             h2 {
-                color: #333;
+                color: black;
                 text-align: center;
                 margin-top: 20px;
             }
 
             form {
-                background-color: #fff;
+                background-color: #A8D5E3;
                 margin: auto;
                 padding: 20px;
                 border-radius: 8px;
                 max-width: 600px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
 
             input[type="text"], input[type="date"], textarea {
@@ -29,9 +34,10 @@
                 padding: 8px;
                 margin: 8px 0;
                 display: inline-block;
-                border: 1px solid #ccc;
+                border: 1px solid #d7ccc8;
                 border-radius: 4px;
                 box-sizing: border-box;
+                background-color: #F2F0EA;
             }
 
             input[type="radio"] {
@@ -40,7 +46,7 @@
 
             input[type="submit"] {
                 width: 100%;
-                background-color: #4CAF50;
+                background-color: #FF78AC;
                 color: white;
                 padding: 14px 20px;
                 margin: 8px 0;
@@ -50,36 +56,37 @@
             }
 
             input[type="submit"]:hover {
-                background-color: #45a049;
+                background-color: #FF4B92; 
             }
 
             .output-container {
-                background-color: #fff;
+                background-color: #A8D5E3;
                 margin: 20px auto;
                 padding: 20px;
                 border-radius: 8px;
                 max-width: 600px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             }
 
             .output-container h2 {
-                color: #45a049;
+                color: #FF78AC; 
                 font-size: 20px;
                 margin-bottom: 20px;
             }
 
             .output-container p {
                 font-size: 14px;
-                color: #333;
+                color: #5d4037;
                 margin: 10px 0;
                 line-height: 1.6;
             }
 
             .output-container strong {
-                color: black;
+                color: #3e2723;
             }
+
             .error {
-                color: red;
+                color: #d32f2f;
             }
         </style>
     </head>
@@ -186,18 +193,18 @@
         </form>
 
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($NPMErr) && empty($namaErr) && empty($alamatErr) && empty($tempatLahirErr) && empty($tanggalLahirErr) && empty($jenisKelaminErr) && empty($hobiErr)) {
-            echo '<div class="output-container">';
-            echo "<h2>Data yang Anda Input:</h2>";
-            echo "<p><strong>NPM:</strong> $NPM</p>";
-            echo "<p><strong>Nama:</strong> " . strtoupper($nama) . "</p>";
-            echo "<p><strong>Alamat:</strong> " . strtoupper($alamat) . "</p>"; 
-            echo "<p><strong>Tempat Lahir:</strong> $tempatLahir</p>";
-            echo "<p><strong>Tanggal Lahir:</strong> $tanggalLahir</p>";
-            echo "<p><strong>Jenis Kelamin:</strong> $jenisKelamin</p>";
-            echo "<p><strong>Hobi:</strong> $hobi</p>";
-            echo '</div>';
-        }
+            if ($_SERVER["REQUEST_METHOD"] == "POST" && empty($NPMErr) && empty($namaErr) && empty($alamatErr) && empty($tempatLahirErr) && empty($tanggalLahirErr) && empty($jenisKelaminErr) && empty($hobiErr)) {
+                echo '<div class="output-container">';
+                echo "<h2>Data yang Anda Input:</h2>";
+                echo "<p><strong>NPM:</strong> $NPM</p>";
+                echo "<p><strong>Nama:</strong> " . strtoupper($nama) . "</p>";
+                echo "<p><strong>Alamat:</strong> " . strtoupper($alamat) . "</p>"; 
+                echo "<p><strong>Tempat Lahir:</strong> $tempatLahir</p>";
+                echo "<p><strong>Tanggal Lahir:</strong> $tanggalLahir</p>";
+                echo "<p><strong>Jenis Kelamin:</strong> $jenisKelamin</p>";
+                echo "<p><strong>Hobi:</strong> $hobi</p>";
+                echo '</div>';
+            }
         ?>
     </body>
 </html>
